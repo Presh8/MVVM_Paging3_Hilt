@@ -1,6 +1,6 @@
 package com.example.tatvasoft.data.network
 
-import com.example.tatvasoft.ListUserResponse
+import com.example.tatvasoft.data.ListUserResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 

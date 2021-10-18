@@ -1,4 +1,4 @@
-package com.example.tatvasoft
+package com.example.tatvasoft.data
 
 import com.squareup.moshi.Json
 

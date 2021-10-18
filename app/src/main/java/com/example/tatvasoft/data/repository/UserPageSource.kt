@@ -2,12 +2,12 @@ package com.example.tatvasoft.data.repository
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.example.tatvasoft.ListUserResponse
+import com.example.tatvasoft.data.ListUserResponse
 import com.example.tatvasoft.data.network.ApiCall
 import retrofit2.HttpException
 import java.io.IOException
 
-class UserPageSource(private val apiCall: ApiCall) : PagingSource<Int,ListUserResponse>() {
+class UserPageSource(private val apiCall: ApiCall) : PagingSource<Int, ListUserResponse>() {
 
     private val DEFULT_OFFSET = 1
 
