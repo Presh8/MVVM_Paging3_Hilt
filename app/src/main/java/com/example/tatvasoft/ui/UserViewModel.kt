@@ -10,14 +10,14 @@ import com.example.tatvasoft.data.ListUserResponse
 import com.example.tatvasoft.data.repository.UserPageSource
 import com.example.tatvasoft.data.network.ApiCall
 import dagger.hilt.android.lifecycle.HiltViewModel
-import java.util.concurrent.Flow
+import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 
 @HiltViewModel
 class UserViewModel @Inject constructor(private val Apicall : ApiCall) : ViewModel() {
 
-    val getAllUser : Flow<PagingData<ListUserResponse>> = Pager(
+    val getAllUser : Flow<PagingData<ListUserResponse.Data.Users>> = Pager(
         config = PagingConfig(10,enablePlaceholders = false)){
         UserPageSource(Apicall)
     }.flow.cachedIn(viewModelScope)

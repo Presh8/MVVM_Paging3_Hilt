@@ -10,7 +10,7 @@ import com.example.tatvasoft.R
 import com.example.tatvasoft.adapter.UserAdapter
 import com.example.tatvasoft.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.flow.collectLatest
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -25,7 +25,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         setMainRecyclerView()
 
@@ -46,9 +47,8 @@ class MainActivity : AppCompatActivity() {
 
    private fun setMainRecyclerView(){
        binding.apply {
-
            rvMain.apply {
-               layoutManager = LinearLayoutManager(this@MainActivity,LinearLayoutManager.VERTICAL,true)
+               layoutManager = LinearLayoutManager(this@MainActivity,LinearLayoutManager.VERTICAL,false)
                adapter = userAdapter
            }
        }

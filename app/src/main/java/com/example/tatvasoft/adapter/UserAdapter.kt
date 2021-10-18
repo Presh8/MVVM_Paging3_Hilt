@@ -10,10 +10,10 @@ import com.example.tatvasoft.data.ListUserResponse
 import com.example.tatvasoft.databinding.ItemFirstRowBinding
 import javax.inject.Inject
 
-class UserAdapter @Inject constructor() : PagingDataAdapter<ListUserResponse,UserAdapter.UserViewHolder>(diff()) {
+class UserAdapter @Inject constructor() : PagingDataAdapter<ListUserResponse.Data.Users,UserAdapter.UserViewHolder>(diff()) {
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
-       val userItem = getItem(position)?.data?.users?.get(position)
+       val userItem = getItem(position)
 
         if (userItem!=null){
             holder.bind(userItem)
@@ -36,15 +36,15 @@ class UserAdapter @Inject constructor() : PagingDataAdapter<ListUserResponse,Use
     }
 
 
-    class diff : DiffUtil.ItemCallback<ListUserResponse>() {
+    class diff : DiffUtil.ItemCallback<ListUserResponse.Data.Users>() {
         override fun areItemsTheSame(
-            oldItem: ListUserResponse,
-            newItem: ListUserResponse
-        ): Boolean = oldItem.data == newItem.data
+            oldItem: ListUserResponse.Data.Users,
+            newItem: ListUserResponse.Data.Users
+        ): Boolean = oldItem.image == newItem.image
 
         override fun areContentsTheSame(
-            oldItem: ListUserResponse,
-            newItem: ListUserResponse
+            oldItem: ListUserResponse.Data.Users,
+            newItem: ListUserResponse.Data.Users
         ): Boolean = oldItem == newItem
 
 
