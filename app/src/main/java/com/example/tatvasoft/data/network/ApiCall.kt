@@ -14,7 +14,7 @@ interface ApiCall {
     }
 
     @GET("api/users")
-    fun getUsers(
+   suspend fun getUsers(
         @Query("offset") offset : Int,
         @Query("limit") limit : Int,
     ) : List<ListUserResponse>
