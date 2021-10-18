@@ -1,9 +1,9 @@
-package com.example.tatvasoft.data
+package com.example.tatvasoft.data.repository
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.example.tatvasoft.ListUserResponse
-import com.example.tatvasoft.network.ApiCall
+import com.example.tatvasoft.data.network.ApiCall
 import retrofit2.HttpException
 import java.io.IOException
 

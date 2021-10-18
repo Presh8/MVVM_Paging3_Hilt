@@ -1,6 +1,6 @@
 package com.example.tatvasoft.di
 
-import com.example.tatvasoft.network.ApiCall
+import com.example.tatvasoft.data.network.ApiCall
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module

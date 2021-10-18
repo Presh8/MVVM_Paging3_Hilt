@@ -1,4 +1,4 @@
-package com.example.tatvasoft.network
+package com.example.tatvasoft.data.network
 
 import com.example.tatvasoft.ListUserResponse
 import retrofit2.http.GET
