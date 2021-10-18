@@ -30,6 +30,7 @@ class UserAdapter @Inject constructor() : PagingDataAdapter<ListUserResponse.Dat
             binding.apply {
                 imgUser.load(userItem.image)
                 tvUserName.text = userItem.name
+
             }
         }
 
